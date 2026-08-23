@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OdontoShine - Contato</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <h1>Odonto<span>Shine</span></h1>
+                <p>Devolvendo o seu brilho</p>
+            </div>
+
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a class="ativo" href="contato.html">Contato</a>
+    </nav>
+
+    <main>
+
+        <section class="pagina-topo">
+            <p class="destaque">Fale conosco</p>
+            <h2>Solicite um agendamento</h2>
+            <p>
+                Escolha o serviço, a data e o período desejado para solicitar seu agendamento.
+            </p>
+        </section>
+
+        <section class="contato">
+
+            <article class="formulario">
+
+                <h2>Dados do agendamento</h2>
+
+                <form action="confirmacao.html" method="get">
+
+                    <label for="nome">Nome completo:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required>
+
+                    <label for="email">E-mail:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+
+                    <label for="telefone">Telefone:</label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(42) 99999-9999"
+                        required>
+
+                    <label for="servico">Serviço desejado:</label>
+
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione</option>
+                        <option value="limpeza">Limpeza</option>
+                        <option value="clareamento">Clareamento</option>
+                        <option value="ortodontia">Ortodontia</option>
+                        <option value="implantes">Implantes</option>
+                        <option value="restauracao">Restauração</option>
+                        <option value="avaliacao">Avaliação</option>
+                    </select>
+
+                    <label for="data">Data desejada:</label>
+
+                    <input
+                        type="date"
+                        id="data"
+                        name="data"
+                        required>
+
+                    <label for="periodo">Período:</label>
+
+                    <select id="periodo" name="periodo" required>
+                        <option value="">Selecione</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+
+                    <label>Primeira consulta?</label>
+
+                    <div class="opcoes-radio">
+                        <label>
+                            <input type="radio" name="primeira_consulta" value="sim" required>
+                            Sim
+                        </label>
+
+                        <label>
+                            <input type="radio" name="primeira_consulta" value="nao">
+                            Não
+                        </label>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" name="confirmacao" value="aceito" required>
+                        Confirmo que os dados acima são apenas uma solicitação de horário.
+                    </label>
+
+                    <input
+                        type="submit"
+                        value="Solicitar agendamento">
+
+                </form>
+
+            </article>
+
+            <aside>
+
+                <h2>Entre em contato</h2>
+
+                <h3>Telefone</h3>
+                <p>(42) 99999-9999</p>
+
+                <h3>E-mail</h3>
+                <p>contato@odontoshine.com.br</p>
+
+                <h3>Endereço</h3>
+                <p>
+                    Rua Principal, 123<br>
+                    Centro - Prudentópolis/PR
+                </p>
+
+                <h3>Horário de atendimento</h3>
+                <p>
+                    Segunda a sexta-feira<br>
+                    08h às 18h
+                </p>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="rodape-conteudo">
+
+            <div>
+                <h3>OdontoShine</h3>
+                <p>Devolvendo o seu brilho.</p>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <p>(42) 99999-9999</p>
+                <p>contato@odontoshine.com.br</p>
+            </div>
+
+            <div>
+                <h3>Horários</h3>
+                <p>Segunda a sexta: 08h às 18h</p>
+                <p>Sábado: 08h às 12h</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 OdontoShine - Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
