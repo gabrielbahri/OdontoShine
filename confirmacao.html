@@ -5,52 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>OdontoShine - Confirmação</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <div class="cabecalho">
-            <div class="logo">
-                <h1>Odonto<span>Shine</span></h1>
-                <p>Devolvendo o seu brilho</p>
-            </div>
+            <a class="logo" href="index.html" aria-label="OdontoShine, início">
+                <span class="marca">Odonto<span>Shine</span></span>
+                <span class="slogan">Devolvendo o seu brilho</span>
+            </a>
+            <a class="botao cabecalho-botao" href="contato.html">Solicitar agendamento</a>
         </div>
     </header>
 
-    <nav>
+    <nav aria-label="Navegação principal">
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
+        <a href="equipe.html">Nossa equipe</a>
         <a href="contato.html">Contato</a>
     </nav>
 
-    <main class="pagina-confirmacao">
+    <main id="conteudo" tabindex="-1" class="pagina-confirmacao">
 
-        <section class="confirmacao">
-
-            <div class="icone-confirmacao">✓</div>
-
-            <h2>Solicitação enviada!</h2>
-
-            <p>
-                Recebemos sua solicitação de agendamento.
-            </p>
-
-            <p>
-                Nossa equipe entrará em contato para confirmar a disponibilidade
-                da data e do período escolhidos.
-            </p>
-
+        <section class="confirmacao" aria-labelledby="titulo-confirmacao">
+            <div class="icone-confirmacao" aria-hidden="true">✓</div>
+            <h1 id="titulo-confirmacao">Resumo do agendamento</h1>
+            <p id="estado-confirmacao" role="status">Ative o JavaScript para consultar sua solicitação de agendamento.</p>
+            <div id="dados-confirmacao" hidden>
+                <p>A data e o período escolhidos estão sujeitos à disponibilidade e à confirmação da clínica.</p>
+                <dl class="resumo-agendamento">
+                    <dt>Nome</dt><dd id="resumo-nome"></dd>
+                    <dt>E-mail</dt><dd id="resumo-email"></dd>
+                    <dt>Telefone</dt><dd id="resumo-telefone"></dd>
+                    <dt>Serviço</dt><dd id="resumo-servico"></dd>
+                    <dt>Data desejada</dt><dd id="resumo-data"></dd>
+                    <dt>Período</dt><dd id="resumo-periodo"></dd>
+                    <dt>Primeira consulta</dt><dd id="resumo-primeira"></dd>
+                </dl>
+            </div>
             <div class="acoes-confirmacao">
                 <a class="botao" href="contato.html">Novo agendamento</a>
                 <a class="botao-secundario" href="index.html">Voltar ao início</a>
             </div>
-
         </section>
 
     </main>
 
     <footer>
+        <p class="aviso-academico">Projeto acadêmico · Clínica fictícia. Contatos ilustrativos; nenhum atendimento é realizado por este site.</p>
         <p>&copy; 2026 OdontoShine - Todos os direitos reservados. Desenvolvido por: Gabriel Bahri</p>
     </footer>
 

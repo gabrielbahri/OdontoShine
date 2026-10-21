@@ -5,32 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>OdontoShine - Serviços</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <div class="cabecalho">
-            <div class="logo">
-                <h1>Odonto<span>Shine</span></h1>
-                <p>Devolvendo o seu brilho</p>
-            </div>
-
-            <a class="botao cabecalho-botao" href="contato.html">Agendar consulta</a>
+            <a class="logo" href="index.html" aria-label="OdontoShine, início">
+                <span class="marca">Odonto<span>Shine</span></span>
+                <span class="slogan">Devolvendo o seu brilho</span>
+            </a>
+            <a class="botao cabecalho-botao" href="contato.html">Solicitar agendamento</a>
         </div>
     </header>
 
-    <nav>
+    <nav aria-label="Navegação principal">
         <a href="index.html">Início</a>
-        <a class="ativo" href="servicos.html">Serviços</a>
+        <a href="servicos.html" class="ativo" aria-current="page">Serviços</a>
+        <a href="equipe.html">Nossa equipe</a>
         <a href="contato.html">Contato</a>
     </nav>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
 
         <section class="pagina-topo">
             <p class="destaque">O que fazemos</p>
-            <h2>Nossos serviços</h2>
+            <h1>Nossos serviços</h1>
             <p>
                 Conheça alguns dos tratamentos oferecidos pela OdontoShine.
             </p>
@@ -47,6 +49,7 @@
                         Remoção de placa bacteriana e tártaro para ajudar
                         a manter sua saúde bucal em dia.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=limpeza">Solicitar limpeza</a>
                 </article>
 
                 <article class="servico">
@@ -56,6 +59,7 @@
                         Tratamento para deixar os dentes mais claros
                         e valorizar ainda mais o seu sorriso.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=clareamento">Solicitar clareamento</a>
                 </article>
 
                 <article class="servico">
@@ -65,6 +69,7 @@
                         Tratamentos com aparelhos para melhorar
                         o alinhamento dos dentes.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=ortodontia">Solicitar ortodontia</a>
                 </article>
 
                 <article class="servico">
@@ -74,6 +79,7 @@
                         Soluções para reposição de dentes com
                         segurança, planejamento e conforto.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=implantes">Solicitar implantes</a>
                 </article>
 
                 <article class="servico">
@@ -83,6 +89,7 @@
                         Recuperação da estrutura e da estética
                         de dentes danificados.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=restauracao">Solicitar restauração</a>
                 </article>
 
                 <article class="servico">
@@ -92,6 +99,7 @@
                         Avaliação odontológica para identificar
                         as necessidades de cada paciente.
                     </p>
+                    <a class="link-servico" href="contato.html?servico=avaliacao">Solicitar avaliação</a>
                 </article>
 
             </div>
@@ -113,6 +121,7 @@
     </main>
 
     <footer>
+        <p class="aviso-academico">Projeto acadêmico · Clínica fictícia. Contatos ilustrativos; nenhum atendimento é realizado por este site.</p>
         <div class="rodape-conteudo">
 
             <div>

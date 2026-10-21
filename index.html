@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>OdontoShine - Início</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <div class="cabecalho">
-            <div class="logo">
-                <h1>Odonto<span>Shine</span></h1>
-                <p>Devolvendo o seu brilho</p>
-            </div>
-
-            <a class="botao cabecalho-botao" href="contato.html">Agendar consulta</a>
+            <a class="logo" href="index.html" aria-label="OdontoShine, início">
+                <span class="marca">Odonto<span>Shine</span></span>
+                <span class="slogan">Devolvendo o seu brilho</span>
+            </a>
+            <a class="botao cabecalho-botao" href="contato.html">Solicitar agendamento</a>
         </div>
     </header>
 
-    <nav>
-        <a class="ativo" href="index.html">Início</a>
+    <nav aria-label="Navegação principal">
+        <a href="index.html" class="ativo" aria-current="page">Início</a>
         <a href="servicos.html">Serviços</a>
+        <a href="equipe.html">Nossa equipe</a>
         <a href="contato.html">Contato</a>
     </nav>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
 
         <section class="inicio">
 
             <article class="inicio-texto">
                 <p class="destaque">Sua saúde bucal é nossa prioridade</p>
 
-                <h2>Seu sorriso em boas mãos</h2>
+                <h1>Seu sorriso em boas mãos</h1>
 
                 <p>
                     Na OdontoShine, unimos cuidado, conforto e qualidade
@@ -41,14 +43,14 @@
                 </p>
 
                 <div class="acoes">
-                    <a class="botao" href="contato.html">Agendar consulta</a>
+                    <a class="botao" href="contato.html">Solicitar agendamento</a>
                     <a class="botao-secundario" href="servicos.html">Conhecer serviços</a>
                 </div>
             </article>
 
             <article class="inicio-imagem">
-                <img src="imagens/atendimento.jpg"
-                     alt="Paciente recebendo atendimento odontológico">
+                <img src="imagens/atendimento-web.jpg"
+                     width="1400" height="933" fetchpriority="high" alt="Paciente recebendo atendimento odontológico">
             </article>
 
         </section>
@@ -57,7 +59,7 @@
 
             <article class="sobre-imagem">
                 <img src="imagens/clinica.jpg"
-                     alt="Ambiente da clínica OdontoShine">
+                     loading="lazy" alt="Ambiente ilustrativo de uma clínica odontológica">
             </article>
 
             <article class="sobre-texto">
@@ -66,8 +68,7 @@
                 <h2>Conheça a OdontoShine</h2>
 
                 <p>
-                    A OdontoShine é uma clínica odontológica fictícia criada
-                    com o objetivo de oferecer tratamentos de qualidade em um
+                    A OdontoShine oferece tratamentos odontológicos de qualidade em um
                     ambiente confortável e acolhedor.
                 </p>
 
@@ -105,6 +106,42 @@
 
         </section>
 
+        <section class="equipe-chamada secao-conteudo" aria-labelledby="titulo-equipe">
+            <div>
+                <p class="destaque">Quem cuida do seu sorriso</p>
+                <h2 id="titulo-equipe">Conheça nossa equipe</h2>
+                <p>Na OdontoShine, escuta e cuidado acompanham cada etapa: da primeira avaliação ao acompanhamento do tratamento.</p>
+                <a class="botao-secundario" href="equipe.html">Ver profissionais e áreas de atuação</a>
+            </div>
+            <div class="etapas-cuidado">
+                <p><strong>01 · Escutar</strong> Entender as necessidades de cada pessoa.</p>
+                <p><strong>02 · Orientar</strong> Explicar as possibilidades com clareza.</p>
+                <p><strong>03 · Acompanhar</strong> Valorizar o cuidado ao longo do tempo.</p>
+            </div>
+        </section>
+
+        <section class="avaliacoes" aria-labelledby="titulo-avaliacoes">
+            <div class="secao-conteudo">
+                <p class="destaque">Experiência de quem se cuida</p>
+                <h2 id="titulo-avaliacoes">Acolhimento em cada detalhe</h2>
+                <p class="nota-exemplo">Cada sorriso tem uma história. Conheça a experiência de quem escolheu cuidar do seu com a OdontoShine.</p>
+                <div class="lista-avaliacoes">
+                    <figure class="avaliacao">
+                        <blockquote><p>“Gostei de poder entender as etapas da consulta antes de escolher o tratamento. Isso me deixou mais tranquila.”</p></blockquote>
+                        <figcaption><strong>Marina S.</strong><span>Avaliação</span></figcaption>
+                    </figure>
+                    <figure class="avaliacao">
+                        <blockquote><p>“Fui ouvido com atenção e consegui tirar minhas dúvidas com calma. O atendimento acolhedor fez diferença.”</p></blockquote>
+                        <figcaption><strong>Rafael M.</strong><span>Limpeza</span></figcaption>
+                    </figure>
+                    <figure class="avaliacao">
+                        <blockquote><p>“Ter uma explicação clara sobre o acompanhamento me ajudou a organizar a rotina de consultas.”</p></blockquote>
+                        <figcaption><strong>Camila R.</strong><span>Ortodontia</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <section class="chamada">
 
             <article>
@@ -121,6 +158,7 @@
     </main>
 
     <footer>
+        <p class="aviso-academico">Projeto acadêmico · Clínica fictícia. Contatos ilustrativos; nenhum atendimento é realizado por este site.</p>
         <div class="rodape-conteudo">
 
             <div>

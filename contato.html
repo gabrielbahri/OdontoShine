@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>OdontoShine - Contato</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <div class="cabecalho">
-            <div class="logo">
-                <h1>Odonto<span>Shine</span></h1>
-                <p>Devolvendo o seu brilho</p>
-            </div>
-
+            <a class="logo" href="index.html" aria-label="OdontoShine, início">
+                <span class="marca">Odonto<span>Shine</span></span>
+                <span class="slogan">Devolvendo o seu brilho</span>
+            </a>
+            <a class="botao cabecalho-botao" href="contato.html">Solicitar agendamento</a>
         </div>
     </header>
 
-    <nav>
+    <nav aria-label="Navegação principal">
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
-        <a class="ativo" href="contato.html">Contato</a>
+        <a href="equipe.html">Nossa equipe</a>
+        <a href="contato.html" class="ativo" aria-current="page">Contato</a>
     </nav>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
 
         <section class="pagina-topo">
             <p class="destaque">Fale conosco</p>
-            <h2>Solicite um agendamento</h2>
+            <h1>Solicite um agendamento</h1>
             <p>
                 Escolha o serviço, a data e o período desejado para solicitar seu agendamento.
             </p>
@@ -41,38 +44,44 @@
 
                 <h2>Dados do agendamento</h2>
 
-                <form action="confirmacao.html" method="get">
+                <p id="orientacao-formulario">Todos os campos são obrigatórios. Atendemos de segunda a sexta, das 08h às 18h, e aos sábados, das 08h às 12h.</p>
+                <noscript><p class="mensagem-formulario">Ative o JavaScript para preencher a solicitação de agendamento.</p></noscript>
+                <form id="form-agendamento" aria-describedby="orientacao-formulario">
 
                     <label for="nome">Nome completo:</label>
 
                     <input
                         type="text"
-                        id="nome"
+                        id="nome" aria-describedby="erro-nome" autocomplete="name" maxlength="100"
                         name="nome"
                         placeholder="Digite seu nome completo"
                         required>
+                    <span class="erro-campo" id="erro-nome"></span>
 
                     <label for="email">E-mail:</label>
 
                     <input
                         type="email"
-                        id="email"
+                        id="email" aria-describedby="erro-email" autocomplete="email" maxlength="150"
                         name="email"
                         placeholder="Digite seu e-mail"
                         required>
+                    <span class="erro-campo" id="erro-email"></span>
 
                     <label for="telefone">Telefone:</label>
 
                     <input
                         type="tel"
-                        id="telefone"
+                        id="telefone" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="ajuda-telefone erro-telefone"
                         name="telefone"
                         placeholder="(42) 99999-9999"
                         required>
+                    <span class="erro-campo" id="erro-telefone"></span>
 
+                    <p class="ajuda" id="ajuda-telefone">Informe o DDD e o número: 10 ou 11 dígitos.</p>
                     <label for="servico">Serviço desejado:</label>
 
-                    <select id="servico" name="servico" required>
+                    <select id="servico" aria-describedby="erro-servico" name="servico" required>
                         <option value="">Selecione</option>
                         <option value="limpeza">Limpeza</option>
                         <option value="clareamento">Clareamento</option>
@@ -81,24 +90,28 @@
                         <option value="restauracao">Restauração</option>
                         <option value="avaliacao">Avaliação</option>
                     </select>
+                    <span class="erro-campo" id="erro-servico"></span>
 
                     <label for="data">Data desejada:</label>
 
                     <input
                         type="date"
-                        id="data"
+                        id="data" aria-describedby="erro-data"
                         name="data"
                         required>
+                    <span class="erro-campo" id="erro-data"></span>
 
                     <label for="periodo">Período:</label>
 
-                    <select id="periodo" name="periodo" required>
+                    <select id="periodo" aria-describedby="erro-periodo" name="periodo" required>
                         <option value="">Selecione</option>
                         <option value="manha">Manhã</option>
                         <option value="tarde">Tarde</option>
                     </select>
+                    <span class="erro-campo" id="erro-periodo"></span>
 
-                    <label>Primeira consulta?</label>
+                    <fieldset aria-describedby="erro-primeira-consulta">
+                    <legend>Primeira consulta?</legend>
 
                     <div class="opcoes-radio">
                         <label>
@@ -112,14 +125,17 @@
                         </label>
                     </div>
 
-                    <label class="checkbox">
-                        <input type="checkbox" name="confirmacao" value="aceito" required>
-                        Confirmo que os dados acima são apenas uma solicitação de horário.
+                    <span class="erro-campo" id="erro-primeira-consulta"></span>
+                    </fieldset>
+
+                    <label class="checkbox" for="aceite">
+                        <input type="checkbox" id="aceite" aria-describedby="erro-aceite" name="confirmacao" value="aceito" required>
+                        Entendo que esta é uma solicitação de agendamento e que o horário depende de confirmação.
                     </label>
 
-                    <input
-                        type="submit"
-                        value="Solicitar agendamento">
+                    <span class="erro-campo" id="erro-aceite"></span>
+                    <p id="mensagem-formulario" class="mensagem-formulario" role="status"></p>
+                    <button class="botao" id="enviar-agendamento" type="submit" disabled>Solicitar agendamento</button>
 
                 </form>
 
@@ -144,7 +160,8 @@
                 <h3>Horário de atendimento</h3>
                 <p>
                     Segunda a sexta-feira<br>
-                    08h às 18h
+                    08h às 18h<br>
+                    Sábado: 08h às 12h
                 </p>
 
             </aside>
@@ -154,6 +171,7 @@
     </main>
 
     <footer>
+        <p class="aviso-academico">Projeto acadêmico · Clínica fictícia. Contatos ilustrativos; nenhum atendimento é realizado por este site.</p>
         <div class="rodape-conteudo">
 
             <div>
